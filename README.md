@@ -4,4 +4,6 @@
  * [博客链接](http://leopardpan.cn) （部署在国内，访问更快）         
  * [Demo链接](http://leopardpan.github.io/) （部署在github page）         
 
+
+原作者  https://github.com/leopardpan/leopardpan.github.io
 如果你喜欢请 Star ，你的 Star 是原作者持续更新的动力, 谢谢 😄.
