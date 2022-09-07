@@ -38,3 +38,6 @@ https://github.com/google/protobuf/releases
     protoc --go_out=. hello.proto
     ```
     go_out 参数告知protoc编译器去加载对应的protoc-gen-go工具，然后通过该工具生成代码，生成代码放到当前目录。
+    如果报错 protoc-gen-go: unable to determine Go import path for "hello.proto"
+    需要指定包路径  在syntax = "proto3"; 下面加一行 option go_package ="goadvance/";
+
