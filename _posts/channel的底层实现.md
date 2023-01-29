@@ -6,7 +6,7 @@ tags:  go设计与实现
 ---
 
 
-# 表现形式
+## 表现形式
 channel跟string或slice有些不同，它在栈上只是一个指针，实际的数据都是由指针所指向的堆上面。
 跟channel相关的操作有：初始化/读/写/关闭。channel未初始化值就是nil，未初始化的channel是不能使用的。下面是一些操作规则：
 
@@ -17,6 +17,7 @@ channel跟string或slice有些不同，它在栈上只是一个指针，实际�
 
 channel数据结构
 
+``go
 struct    Hchan
 {
     uintgo    qcount;            // 队列q中的总数据数量
@@ -30,7 +31,8 @@ struct    Hchan
     WaitQ    recvq;            // 因recv而阻塞的等待队列
     WaitQ    sendq;            // 因send而阻塞的等待队列
     **Lock;**  //有锁
-};
+}
+``
 让我们来看一个Hchan这个结构体。其中一个核心的部分是存放channel数据的环形队列，由qcount和elemsize分别指定了队列的容量和当前使用量。dataqsize是队列的大小
 
 如果是带缓冲区的chan，则缓冲区数据实际上是紧接着Hchan结构体中分配的。
