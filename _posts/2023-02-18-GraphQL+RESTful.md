@@ -1,3 +1,10 @@
+---
+layout: post
+title: GraphQL & RESTful
+date: 2023-02-18
+tags: 接口协议  
+---
+
 # GraphQL
 
 一句话解释：GraphQL 不是 REST 的替代品，而是另一种交互形式：**前端决定后端的返回结果**
